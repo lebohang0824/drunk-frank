@@ -13,6 +13,7 @@ router.post('/session', function(req, res, next) {
 
 	assistant.createSession()
 		.then(results => {
+			console.log(results);
 	    	if (results.status == 201) {
 	    		res.send({session: results.result.session_id});
 	    	}
